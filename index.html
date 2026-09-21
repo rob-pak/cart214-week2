@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="./src/main.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title>Self Portrait / Robert Pakulski</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="emotions">
+      <input type="radio" id="clarity" name="emotion" value="1" checked>
+      <label for="clarity">Clarity / Overstimulation</label>
+
+      <input type="radio" id="order" name="emotion" value="2">
+      <label for="order">Order / Chaos</label>
+    </div>
+  </div>
+  <div class="canvas-container">
+
+    <div class="card">
+      <div id="card-title-a" class="card-title">Order</div>
+      <canvas id="canvasA"></canvas>
+    </div>
+
+    <div class="card">
+      <div id="card-title-b" class="card-title">Chaos</div>
+      <canvas id="canvasB"></canvas>
+    </div>
+
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #8a0715;
+  --background: #efede8;
+  --buttons: #c2beb7;
+}
+
+@font-face {
+  font-family: "Libre Caslon Condensed";
+  src: url("./fonts/LibreCaslonCondensed.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libre Caslon Condensed";
+  src: url("./fonts/LibreCaslonCondensed-Italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100dvh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.canvas-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.card-title {
+  font-family: "Libre Caslon Condensed", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  top: 5rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.emotions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  background: white;
+  color: var(--primary);
+  border-radius: 0.25rem;
+}
+
+input[type="radio"]:checked+label {
+  background: var(--primary);
+  color: white;
+}
