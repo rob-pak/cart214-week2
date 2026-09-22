@@ -9,6 +9,12 @@ const emotions = {
   overstimulation: new Emotion("Overstimulation", "../img/overstimulation/", 4),
   order: new Emotion("Order", "../img/order/", 4),
   chaos: new Emotion("Chaos", "../img/chaos/", 4),
+  soft: new Emotion("Soft", "../img/soft/", 6),
+  harsh: new Emotion("Harsh", "../img/harsh/", 6),
+  calm: new Emotion("Calm", "../img/calm/", 4),
+  agitated: new Emotion("Agitated", "../img/agitated/", 4),
+  deep: new Emotion("Deep", "../img/deep/", 4),
+  shallow: new Emotion("Shallow", "../img/shallow/", 4),
 };
 
 const CONFIG = {
@@ -17,8 +23,11 @@ const CONFIG = {
 };
 
 const PAIRS = {
-  CLARITY_OVERSTIM: 1,
+  CLARITY_OVERSTIMULATION: 1,
   ORDER_CHAOS: 2,
+  SOFT_HARSH: 3,
+  CALM_AGITATED: 4,
+  DEEP_SHALLOW: 5,
 }
 
 let currentEmotionA = emotions.clarity;
@@ -33,11 +42,20 @@ Object.values(emotions).forEach((emotion) => {
 document.querySelectorAll('input[name="emotion"]').forEach(input => {
   input.addEventListener("change", () => {
     switch (parseInt(input.value)) {
-      case PAIRS.CLARITY_OVERSTIM:
+      case PAIRS.CLARITY_OVERSTIMULATION:
         updateCurrentEmotions(emotions.clarity, emotions.overstimulation);
         break;
       case PAIRS.ORDER_CHAOS:
         updateCurrentEmotions(emotions.order, emotions.chaos);
+        break;
+      case PAIRS.SOFT_HARSH:
+        updateCurrentEmotions(emotions.soft, emotions.harsh);
+        break;
+      case PAIRS.CALM_AGITATED:
+        updateCurrentEmotions(emotions.calm, emotions.agitated);
+        break;
+      case PAIRS.DEEP_SHALLOW:
+        updateCurrentEmotions(emotions.deep, emotions.shallow);
         break;
     }
   });
