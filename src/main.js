@@ -107,3 +107,10 @@ skB.update((dt) => {
 skB.draw(() => {
   currentEmotionB.draw(skB);
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  const wrap = document.querySelector(".nl-wrap");
+  if (wrap) {
+    wrap.style.display = "none";
+  }
+})
