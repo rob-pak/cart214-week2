@@ -79,7 +79,3 @@ input[type="radio"]:checked+label {
   background: var(--primary);
   color: white;
 }
-
-.nl-wrap {
-  display: none !important;
-}
